@@ -1,0 +1,345 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-cream: var(--cream);
+  --color-matcha: var(--matcha);
+  --color-matcha-deep: var(--matcha-deep);
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --cream: oklch(0.985 0.015 95);
+  --matcha: oklch(0.72 0.11 140);
+  --matcha-deep: oklch(0.45 0.09 145);
+
+  --background: oklch(0.985 0.015 95);
+  --foreground: oklch(0.28 0.03 145);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.28 0.03 145);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.28 0.03 145);
+  --primary: oklch(0.55 0.11 145);
+  --primary-foreground: oklch(0.985 0.015 95);
+  --secondary: oklch(0.93 0.04 135);
+  --secondary-foreground: oklch(0.35 0.06 145);
+  --muted: oklch(0.95 0.02 120);
+  --muted-foreground: oklch(0.5 0.02 145);
+  --accent: oklch(0.9 0.06 140);
+  --accent-foreground: oklch(0.35 0.06 145);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.99 0.01 95);
+  --border: oklch(0.9 0.03 135);
+  --input: oklch(0.92 0.03 135);
+  --ring: oklch(0.65 0.1 145);
+  --chart-1: oklch(0.65 0.13 145);
+  --chart-2: oklch(0.55 0.11 100);
+  --chart-3: oklch(0.7 0.09 160);
+  --chart-4: oklch(0.6 0.14 60);
+  --chart-5: oklch(0.5 0.1 210);
+  --sidebar: oklch(0.97 0.03 130);
+  --sidebar-foreground: oklch(0.3 0.04 145);
+  --sidebar-primary: oklch(0.5 0.1 145);
+  --sidebar-primary-foreground: oklch(0.985 0.015 95);
+  --sidebar-accent: oklch(0.92 0.05 135);
+  --sidebar-accent-foreground: oklch(0.35 0.06 145);
+  --sidebar-border: oklch(0.88 0.04 135);
+  --sidebar-ring: oklch(0.65 0.1 145);
+}
+
+.dark {
+  --background: oklch(0.22 0.02 145);
+  --foreground: oklch(0.96 0.015 95);
+  --card: oklch(0.28 0.03 145);
+  --card-foreground: oklch(0.96 0.015 95);
+  --popover: oklch(0.28 0.03 145);
+  --popover-foreground: oklch(0.96 0.015 95);
+  --primary: oklch(0.75 0.11 145);
+  --primary-foreground: oklch(0.22 0.02 145);
+  --secondary: oklch(0.32 0.04 145);
+  --secondary-foreground: oklch(0.96 0.015 95);
+  --muted: oklch(0.32 0.03 145);
+  --muted-foreground: oklch(0.7 0.03 130);
+  --accent: oklch(0.36 0.05 140);
+  --accent-foreground: oklch(0.96 0.015 95);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.99 0.01 95);
+  --border: oklch(0.35 0.03 145);
+  --input: oklch(0.35 0.03 145);
+  --ring: oklch(0.65 0.1 145);
+  --sidebar: oklch(0.24 0.03 145);
+  --sidebar-foreground: oklch(0.96 0.015 95);
+  --sidebar-primary: oklch(0.7 0.11 145);
+  --sidebar-primary-foreground: oklch(0.22 0.02 145);
+  --sidebar-accent: oklch(0.32 0.04 145);
+  --sidebar-accent-foreground: oklch(0.96 0.015 95);
+  --sidebar-border: oklch(0.32 0.03 145);
+  --sidebar-ring: oklch(0.65 0.1 145);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    width: 100%;
+    overflow-x: hidden;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    width: 100%;
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  h1 {
+    overflow-wrap: anywhere;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    max-width: 100%;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+}
+
+.receipt-80mm {
+  width: 80mm;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #000;
+  background: #fff;
+  padding: 8px;
+}
+
+@media (max-width: 640px) {
+  .receipt-80mm {
+    width: min(80mm, calc(100vw - 2rem));
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  aside,
+  header,
+  nav,
+  .no-print,
+  [data-sonner-toaster],
+  button,
+  input,
+  textarea,
+  select {
+    display: none !important;
+  }
+
+  main {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 16px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 1px solid #d9d9d9 !important;
+  }
+
+  .print-logo {
+    width: 42px !important;
+    height: 42px !important;
+    object-fit: contain !important;
+    border-radius: 999px !important;
+  }
+
+  .print-title {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+
+  .print-subtitle {
+    font-size: 12px !important;
+    color: #555555 !important;
+    margin-top: 2px !important;
+  }
+
+  .overflow-x-auto {
+    overflow: visible !important;
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  th,
+  td {
+    color: #000000 !important;
+  }
+
+  .receipt-80mm {
+    width: 80mm !important;
+    max-width: 80mm !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: "Courier New", monospace !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+
+  body:has(#print-area) {
+    background: #ffffff !important;
+  }
+
+  body:has(#print-area) * {
+    visibility: hidden !important;
+  }
+
+  body:has(#print-area) #print-area,
+  body:has(#print-area) #print-area * {
+    visibility: visible !important;
+  }
+
+  body:has(#print-area) #print-area {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 80mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body:has(#report-print) * {
+    visibility: hidden !important;
+  }
+
+  body:has(#report-print) #report-print,
+  body:has(#report-print) #report-print * {
+    visibility: visible !important;
+  }
+
+  body:has(#report-print) #report-print {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body:has(#cashier-session-print) * {
+    visibility: hidden !important;
+  }
+
+  body:has(#cashier-session-print) #cashier-session-print,
+  body:has(#cashier-session-print) #cashier-session-print * {
+    visibility: visible !important;
+  }
+
+  body:has(#cashier-session-print) #cashier-session-print {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
