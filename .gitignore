@@ -30,4 +30,32 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Secrets, Credentials, & Private Keys
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+*.key
+*.pem
+*.pfx
+*.cer
+*.crt
+id_rsa
+id_dsa
+
+# Databases & SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# OS Junk
+Thumbs.db
+desktop.ini
+
+# Caches
+.eslintcache
+.stylelintcache
+.sass-cache
+
